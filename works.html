@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Works | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">PORTFOLIO.</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="academic.html">Academic</a></li>
+                <li><a href="works.html" class="active">Works</a></li>
+                <li><a href="qualities.html">Qualities</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="animate">
+            <h1 style="margin-bottom: 3rem;">Personal Experience</h1>
+            
+            <div class="experience-container">
+                <!-- Experience 1 -->
+                <div class="experience-card">
+                    <div class="exp-logo">
+                        <img src="/assets/inari.jpg" alt="Inari Technology Logo">
+                    </div>
+                    <div class="exp-info">
+                        <h3>Diploma Intern</h3>
+                        <p class="exp-company">Inari Technology Sdn Bhd · Internship</p>
+                        <p class="exp-meta">Jan 2024 - Jun 2024 · 6 mos <br> Bayan Lepas, Penang, Malaysia · On-site</p>
+                        
+                        <div class="exp-description">
+                            <ul style="list-style-type: disc; margin-left: 1.5rem; color: var(--secondary-color); font-size: 0.95rem; line-height: 1.6;">
+                                <li>Spearheaded the development of an <strong>Industrial GUI Automation Framework</strong> for the MIT50 system using Python, PyAutoGUI, and OpenCV.</li>
+                                <li>Automated complex UI interactions and lot-starting processes, significantly reducing manual error and operational time.</li>
+                                <li>Integrated <strong>Node-RED APIs</strong> for real-time machine info fetching and process state monitoring.</li>
+                                <li>Developed custom Python scripts for <strong>reflow oven monitoring</strong> and <strong>graph analysis</strong> to track manufacturing states.</li>
+                                <li>Collaborated with a professional engineering team to solve real-world production challenges and master process automation workflows.</li>
+                            </ul>
+                        </div>
+
+                        <div class="exp-media">
+                            <img src="./assets/intern_image1.jpg" alt="Internship Team">
+                            <img src="./assets/intern_image2.jpg" alt="Internship Team">
+                        </div>
+
+                        <div class="skill-tags">
+                            <span class="skill-tag"><i style="font-size: 0.7rem; margin-right: 0.4rem;"></i> Machine Learning</span>
+                            <span class="skill-tag"><i style="font-size: 0.7rem; margin-right: 0.4rem;"></i> Artificial Intelligence (AI)</span>
+                            <span class="skill-tag">Image Processing</span>
+                            <span class="skill-tag">OpenCV</span>
+                            <span class="skill-tag">Node-RED</span>
+                            <span class="skill-tag">Python Automation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h1 style="margin-bottom: 1rem; margin-top: 5rem;">Selected Works</h1>
+            <p style="margin-bottom: 4rem; max-width: 600px;">Detailed analysis and implementation of my core projects across UTeM and Polytechnic.</p>
+
+            <div class="grid">
+                <!-- Project 1: UTeM FYP 1 -->
+                <div class="card">
+                    <div style="width: 100%; height: 200px; background: rgba(255,255,255,0.05); border-radius: 8px; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-microscope" style="font-size: 3rem; color: #f472b6; opacity: 0.6;"></i>
+                    </div>
+                    <span style="color: var(--accent-color); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Degree Final Year Project</span>
+                    <h3 style="margin-top: 0.5rem;">Synthetic Defect Generation Framework</h3>
+                    <p>Researching a <strong>Semi-Supervised Generative AI</strong> framework for industrial inspection. Focused on creating high-fidelity synthetic defect data to train classification models.</p>
+                    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+                        <span style="padding: 0.2rem 0.6rem; background: rgba(255,255,255,0.05); border-radius: 4px; font-size: 0.75rem;">GANs</span>
+                        <span style="padding: 0.2rem 0.6rem; background: rgba(255,255,255,0.05); border-radius: 4px; font-size: 0.75rem;">Deep Learning</span>
+                        <span style="padding: 0.2rem 0.6rem; background: rgba(255,255,255,0.05); border-radius: 4px; font-size: 0.75rem;">Image Processing</span>
+                    </div>
+                </div>
+
+                <!-- Project 2: Workshop II -->
+                <div class="card">
+                    <div style="width: 100%; height: 200px; background: rgba(255,255,255,0.05); border-radius: 8px; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-music" style="font-size: 3rem; color: #1DB954; opacity: 0.6;"></i>
+                    </div>
+                    <span style="color: var(--accent-color); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">UTeM Sem 3 Workshop</span>
+                    <h3 style="margin-top: 0.5rem;">Emotion-Based Music Suggester</h3>
+                    <p>Designed a <strong>Smart Music Recommendation System</strong> that analyzes user facial expressions to detect mood and suggests tailored Spotify playlists.</p>
+                    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+                        <span style="padding: 0.2rem 0.6rem; background: rgba(255,255,255,0.05); border-radius: 4px; font-size: 0.75rem;">Facial Recognition</span>
+                        <span style="padding: 0.2rem 0.6rem; background: rgba(255,255,255,0.05); border-radius: 4px; font-size: 0.75rem;">Spotify API</span>
+                    </div>
+                </div>
+
+                <!-- Project 3: Workshop I -->
+                <div class="card">
+                    <div style="width: 100%; height: 200px; background: rgba(255,255,255,0.05); border-radius: 8px; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-hotel" style="font-size: 3rem; color: #a78bfa; opacity: 0.6;"></i>
+                    </div>
+                    <span style="color: var(--accent-color); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">UTeM Sem 1 Workshop</span>
+                    <h3 style="margin-top: 0.5rem;">iHostel Management System</h3>
+                    <p>Engineered a robust Hostel Management System using C++ and MySQL, featuring multi-tier authentication and room allocation algorithms.</p>
+                    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+                        <span style="padding: 0.2rem 0.6rem; background: rgba(255,255,255,0.05); border-radius: 4px; font-size: 0.75rem;">C++</span>
+                        <span style="padding: 0.2rem 0.6rem; background: rgba(255,255,255,0.05); border-radius: 4px; font-size: 0.75rem;">MySQL</span>
+                        <span style="padding: 0.2rem 0.6rem; background: rgba(255,255,255,0.05); border-radius: 4px; font-size: 0.75rem;">Statistics</span>
+                    </div>
+                </div>
+
+                <!-- Project 4: AI Defect Detection & E-Mapping -->
+                <div class="card">
+                    <div style="width: 100%; height: 200px; background: rgba(255,255,255,0.05); border-radius: 8px; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-search" style="font-size: 3rem; color: #ef4444; opacity: 0.6;"></i>
+                    </div>
+                    <span style="color: var(--accent-color); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Industrial AI</span>
+                    <h3 style="margin-top: 0.5rem;">Object Detection & E-Mapping System</h3>
+                    <p>Created a custom <strong>YOLO-based training model</strong> to predict object status (Good, Missing, or Defect). Implemented automated image processing and <strong>E-Map visualization</strong> with XML data export.</p>
+                    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+                        <span style="padding: 0.2rem 0.6rem; background: rgba(255,255,255,0.05); border-radius: 4px; font-size: 0.75rem;">YOLO</span>
+                        <span style="padding: 0.2rem 0.6rem; background: rgba(255,255,255,0.05); border-radius: 4px; font-size: 0.75rem;">CVAT Labeling</span>
+                        <span style="padding: 0.2rem 0.6rem; background: rgba(255,255,255,0.05); border-radius: 4px; font-size: 0.75rem;">E-Mapping</span>
+                    </div>
+                </div>
+
+                <!-- Project 5: MIT50 Automation -->
+                <div class="card">
+                    <div style="width: 100%; height: 200px; background: rgba(255,255,255,0.05); border-radius: 8px; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-robot" style="font-size: 3rem; color: #60a5fa; opacity: 0.6;"></i>
+                    </div>
+                    <span style="color: var(--accent-color); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Industrial Automation</span>
+                    <h3 style="margin-top: 0.5rem;">MIT50 GUI Automation Framework</h3>
+                    <p>Developed an <strong>Industrial Automation tool</strong> using Python and OpenCV to automate MIT50 software. Integrated Node-RED APIs for machine data fetching and real-time process monitoring.</p>
+                    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+                        <span style="padding: 0.2rem 0.6rem; background: rgba(255,255,255,0.05); border-radius: 4px; font-size: 0.75rem;">Python</span>
+                        <span style="padding: 0.2rem 0.6rem; background: rgba(255,255,255,0.05); border-radius: 4px; font-size: 0.75rem;">PyAutoGUI</span>
+                        <span style="padding: 0.2rem 0.6rem; background: rgba(255,255,255,0.05); border-radius: 4px; font-size: 0.75rem;">Node-RED</span>
+                    </div>
+                </div>
+
+                <!-- Project 6: Polytechnic FYP -->
+                <div class="card">
+                    <div style="width: 100%; height: 200px; background: rgba(255,255,255,0.05); border-radius: 8px; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-calendar-alt" style="font-size: 3rem; color: #fbbf24; opacity: 0.6;"></i>
+                    </div>
+                    <span style="color: var(--accent-color); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Diploma Integrated Project</span>
+                    <h3 style="margin-top: 0.5rem;">PolyTime: Digital Timetable</h3>
+                    <p>Developed <strong>PolyTime</strong>, a cross-platform (Web & Mobile) timetable system for Polytechnic students featuring automated schedule tracking.</p>
+                    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+                        <span style="padding: 0.2rem 0.6rem; background: rgba(255,255,255,0.05); border-radius: 4px; font-size: 0.75rem;">Full-Stack</span>
+                        <span style="padding: 0.2rem 0.6rem; background: rgba(255,255,255,0.05); border-radius: 4px; font-size: 0.75rem;">JSON</span>
+                        <span style="padding: 0.2rem 0.6rem; background: rgba(255,255,255,0.05); border-radius: 4px; font-size: 0.75rem;">Firebase</span>
+                        <span style="padding: 0.2rem 0.6rem; background: rgba(255,255,255,0.05); border-radius: 4px; font-size: 0.75rem;">Java</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/TokyoChan125" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/jason-chan-83b9a0276" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/chanjasonc/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2026 Chan Jason. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

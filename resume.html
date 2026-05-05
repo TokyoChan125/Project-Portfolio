@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Chan Jason</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @media print {
+            @page {
+                size: A4;
+                margin: 20mm;
+            }
+            body {
+                background: #fff !important;
+                padding: 0 !important;
+                color: #000 !important;
+            }
+            header, footer, .no-print {
+                display: none !important;
+            }
+            .cv-paper {
+                box-shadow: none !important;
+                padding: 0 !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                border: none !important;
+            }
+            .cv-section {
+                padding: 0 !important;
+                display: block !important;
+            }
+            .cv-header h1 {
+                font-size: 28pt !important;
+            }
+            .cv-section-title {
+                margin-top: 20pt !important;
+                break-after: avoid;
+            }
+            .cv-item {
+                break-inside: avoid;
+            }
+            a {
+                text-decoration: none !important;
+                color: #000 !important;
+            }
+        }
+    </style>
+</head>
+<body style="background: var(--bg-gradient); background-attachment: fixed;">
+
+    <header class="no-print">
+        <nav>
+            <a href="index.html" class="logo">PORTFOLIO.</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="academic.html">Academic</a></li>
+                <li><a href="works.html">Works</a></li>
+                <li><a href="qualities.html">Qualities</a></li>
+                <li><a href="resume.html" class="active">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Print Button Section -->
+        <div class="no-print" style="max-width: 900px; margin: 8rem auto -2rem; text-align: right; padding: 0 2rem; position: relative; z-index: 10;">
+            <button id="print-btn" class="btn" style="background: var(--gold-accent); color: #fff; box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3); border: 1px solid rgba(255,255,255,0.1);">
+                <i class="fas fa-print" style="margin-right: 0.5rem;"></i> Print / Download PDF
+            </button>
+        </div>
+
+        <section class="cv-section animate">
+            <div class="cv-paper">
+                <!-- Header -->
+                <div class="cv-header">
+                    <div>
+                        <span class="title">Aspiring AI Developer</span>
+                        <h1>CHAN JASON</h1>
+                        <div class="cv-contact">
+                            <div class="cv-contact-item"><i class="fas fa-envelope"></i> redstone1250@gmail.com</div>
+                            <div class="cv-contact-item"><i class="fab fa-linkedin"></i> linkedin.com/in/jason-chan-83b9a0276</div>
+                            <div class="cv-contact-item"><i class="fas fa-phone"></i> +6016-2131088</div>
+                            <div class="cv-contact-item"><i class="fas fa-map-marker-alt"></i> Jitra, Kedah, Malaysia</div>
+                        </div>
+                    </div>
+                    <div class="cv-photo">
+                        <img src="./assets/Passport.jpg" alt="Chan Jason">
+                    </div>
+                </div>
+
+                <!-- Objective -->
+                <div class="cv-body-section">
+                    <h2 class="cv-section-title"><i class="fas fa-bullseye"></i> Objective</h2>
+                    <p style="color: #444; line-height: 1.8;">A goal-oriented Computer Science student specializing in Artificial Intelligence with hands-on experience in industrial automation, image processing, and full-stack development. Passionate about building intelligent systems that solve real-world production challenges and optimizing workflows through machine learning and automation.</p>
+                </div>
+
+                <!-- Education -->
+                <div class="cv-body-section">
+                    <h2 class="cv-section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
+                    <div class="cv-item">
+                        <div class="cv-item-header">
+                            <h3>Bachelor of Computer Science (Artificial Intelligence)</h3>
+                            <span class="date">2024 — Present</span>
+                        </div>
+                        <span class="sub-header">Universiti Teknikal Malaysia Melaka (UTeM)</span>
+                        <ul class="cv-list">
+                            <li>Focusing on Deep Learning, Image Processing, and Neural Network optimization.</li>
+                            <li>Researching Semi-Supervised GANs for industrial defect detection.</li>
+                        </ul>
+                    </div>
+                    <div class="cv-item">
+                        <div class="cv-item-header">
+                            <h3>Diploma in Information Technology</h3>
+                            <span class="date">2021 — 2024</span>
+                        </div>
+                        <span class="sub-header">Politeknik Sultan Abdul Halim Muadzam Shah (Polimas)</span>
+                        <ul class="cv-list">
+                            <li>Specialized in Web and Mobile Application Development.</li>
+                            <li>Developed PolyTime as a final year integrated project.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience -->
+                <div class="cv-body-section">
+                    <h2 class="cv-section-title"><i class="fas fa-briefcase"></i> Professional Experience</h2>
+                    <div class="cv-item">
+                        <div class="cv-item-header">
+                            <h3>Diploma Intern</h3>
+                            <span class="date">Jan 2024 — Jun 2024</span>
+                        </div>
+                        <span class="sub-header">Inari Technology Sdn Bhd · Bayan Lepas, Penang</span>
+                        <ul class="cv-list">
+                            <li>Spearheaded the development of an <strong>Industrial GUI Automation Framework</strong> for the MIT50 system using Python, PyAutoGUI, and OpenCV.</li>
+                            <li>Automated complex UI interactions and lot-starting processes, reducing operational time and manual error.</li>
+                            <li>Integrated <strong>Node-RED APIs</strong> for machine information fetching and process monitoring.</li>
+                            <li>Developed custom Python scripts for reflow oven monitoring and graph data analysis.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Technical Skills -->
+                <div class="cv-body-section">
+                    <h2 class="cv-section-title"><i class="fas fa-code-branch"></i> Technical Skills</h2>
+                    <div class="cv-skills-grid">
+                        <div class="cv-skill-cat">
+                            <h4>AI & Machine Learning</h4>
+                            <div class="cv-skill-tags">
+                                <span class="cv-skill-tag">YOLO</span>
+                                <span class="cv-skill-tag">OpenCV</span>
+                                <span class="cv-skill-tag">Deep Learning</span>
+                                <span class="cv-skill-tag">GANs</span>
+                            </div>
+                        </div>
+                        <div class="cv-skill-cat">
+                            <h4>Programming</h4>
+                            <div class="cv-skill-tags">
+                                <span class="cv-skill-tag">Python</span>
+                                <span class="cv-skill-tag">C++</span>
+                                <span class="cv-skill-tag">Java</span>
+                                <span class="cv-skill-tag">HTML/CSS</span>
+                            </div>
+                        </div>
+                        <div class="cv-skill-cat">
+                            <h4>Database & Cloud</h4>
+                            <div class="cv-skill-tags">
+                                <span class="cv-skill-tag">MySQL</span>
+                                <span class="cv-skill-tag">Firebase</span>
+                                <span class="cv-skill-tag">JSON/XML</span>
+                            </div>
+                        </div>
+                        <div class="cv-skill-cat">
+                            <h4>Automation Tools</h4>
+                            <div class="cv-skill-tags">
+                                <span class="cv-skill-tag">Node-RED</span>
+                                <span class="cv-skill-tag">CVAT</span>
+                                <span class="cv-skill-tag">PyAutoGUI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Projects -->
+                <div class="cv-body-section">
+                    <h2 class="cv-section-title"><i class="fas fa-project-diagram"></i> Key Projects</h2>
+                    <div class="cv-item" style="margin-bottom: 1rem;">
+                        <h3 style="font-size: 1rem;">Synthetic Defect Generation Framework (Degree FYP)</h3>
+                        <p style="font-size: 0.9rem; color: #555;">Researching Semi-Supervised Generative AI for industrial inspection data augmentation.</p>
+                    </div>
+                    <div class="cv-item" style="margin-bottom: 1rem;">
+                        <h3 style="font-size: 1rem;">Object Detection & E-Mapping System (Industrial)</h3>
+                        <p style="font-size: 0.9rem; color: #555;">Custom YOLO model for predicting Good/Missing/Defect status with XML E-Map export.</p>
+                    </div>
+                    <div class="cv-item" style="margin-bottom: 1rem;">
+                        <h3 style="font-size: 1rem;">PolyTime: Digital Timetable (Diploma FYP)</h3>
+                        <p style="font-size: 0.9rem; color: #555;">Cross-platform scheduling system for Polytechnic students using Firebase.</p>
+                    </div>
+                    <div class="cv-item" style="margin-bottom: 1rem;">
+                        <h3 style="font-size: 1rem;">Emotion-Based Music Suggester (Workshop II)</h3>
+                        <p style="font-size: 0.9rem; color: #555;">Facial recognition system integrated with Spotify API for mood-based playlists.</p>
+                    </div>
+                </div>
+
+                <!-- Languages -->
+                <div class="cv-body-section">
+                    <h2 class="cv-section-title"><i class="fas fa-language"></i> Languages</h2>
+                    <div class="cv-skills-grid">
+                        <div class="cv-skill-cat">
+                            <h4 style="border: none;">Chinese</h4>
+                            <p style="font-size: 0.85rem; color: #666;">Professional working proficiency</p>
+                        </div>
+                        <div class="cv-skill-cat">
+                            <h4 style="border: none;">English</h4>
+                            <p style="font-size: 0.85rem; color: #666;">Professional working proficiency</p>
+                        </div>
+                        <div class="cv-skill-cat">
+                            <h4 style="border: none;">Malay</h4>
+                            <p style="font-size: 0.85rem; color: #666;">Professional working proficiency</p>
+                        </div>
+                        <div class="cv-skill-cat">
+                            <h4 style="border: none;">Hokkien</h4>
+                            <p style="font-size: 0.85rem; color: #666;">Elementary proficiency</p>
+                        </div>
+                        <div class="cv-skill-cat">
+                            <h4 style="border: none;">Japanese</h4>
+                            <p style="font-size: 0.85rem; color: #666;">Elementary proficiency (Duolingo Score 15)</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="no-print">
+        <div class="social-links">
+            <a href="https://github.com/TokyoChan125" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/jason-chan-83b9a0276" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/chanjasonc/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2026 Chan Jason. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('print-btn').addEventListener('click', function() {
+            window.print();
+        });
+    </script>
+
+</body>
+</html>

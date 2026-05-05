@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">PORTFOLIO.</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="academic.html">Academic</a></li>
+                <li><a href="works.html">Works</a></li>
+                <li><a href="qualities.html">Qualities</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="animate">
+            <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem;">
+                <!-- Contact Info -->
+                <div>
+                    <h1 style="margin-bottom: 1rem;">Let's talk.</h1>
+                    <p style="margin-bottom: 3rem;">Have a project in mind or just want to say hi? Feel free to reach out via email or social media.</p>
+                    
+                    <div style="margin-bottom: 2rem;">
+                        <span style="display: block; color: var(--accent-color); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 0.5rem;">Email</span>
+                        <a href="mailto:redstone1250@gmail.com" style="font-size: 1.2rem; font-weight: 500;">redstone1250@gmail.com</a>
+                    </div>
+
+                    <div style="margin-bottom: 3rem;">
+                        <span style="display: block; color: var(--accent-color); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 1rem;">Follow Me</span>
+                        <div style="display: flex; gap: 1.5rem; font-size: 1.5rem;">
+                            <a href="https://github.com/TokyoChan125" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/jason-chan-83b9a0276" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/chanjasonc/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="card">
+                    <form action="#" method="POST" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                <label style="font-size: 0.8rem; font-weight: 600; color: var(--secondary-color);">Name</label>
+                                <input type="text" placeholder="John Doe" style="padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: var(--text-color);">
+                            </div>
+                            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                <label style="font-size: 0.8rem; font-weight: 600; color: var(--secondary-color);">Email</label>
+                                <input type="email" placeholder="john@example.com" style="padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: var(--text-color);">
+                            </div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                            <label style="font-size: 0.8rem; font-weight: 600; color: var(--secondary-color);">Subject</label>
+                            <input type="text" placeholder="Project Inquiry" style="padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: var(--text-color);">
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                            <label style="font-size: 0.8rem; font-weight: 600; color: var(--secondary-color);">Message</label>
+                            <textarea rows="5" placeholder="How can I help you?" style="padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: var(--text-color); resize: none;"></textarea>
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Personal Portfolio. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
