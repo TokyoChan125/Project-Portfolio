@@ -55,7 +55,7 @@
     <header class="no-print">
         <nav>
             <a href="index.html" class="logo">PORTFOLIO.</a>
-            <ul class="nav-links">
+            <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="academic.html">Academic</a></li>
                 <li><a href="works.html">Works</a></li>
@@ -63,6 +63,9 @@
                 <li><a href="resume.html" class="active">Resume</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+            <div class="menu-btn" id="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
         </nav>
     </header>
 
@@ -249,6 +252,17 @@
     <script>
         document.getElementById('print-btn').addEventListener('click', function() {
             window.print();
+        });
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const navLinks = document.getElementById('nav-links');
+
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = menuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
         });
     </script>
 
