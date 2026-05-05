@@ -689,3 +689,29 @@ footer {
         justify-items: center;
     }
 }
+/* Form Status Messages */
+#form-status {
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: none;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+#form-status.success {
+    display: block;
+    background: rgba(40, 167, 69, 0.1);
+    color: #28a745;
+    border: 1px solid rgba(40, 167, 69, 0.2);
+}
+
+#form-status.error {
+    display: block;
+    background: rgba(220, 53, 69, 0.1);
+    color: #dc3545;
+    border: 1px solid rgba(220, 53, 69, 0.2);
+}
+

@@ -48,26 +48,27 @@
 
                 <!-- Contact Form -->
                 <div class="card">
-                    <form action="#" method="POST" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    <form id="contact-form" action="https://formspree.io/f/mpqbdywy" method="POST" style="display: flex; flex-direction: column; gap: 1.5rem;">
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
                             <div style="display: flex; flex-direction: column; gap: 0.5rem;">
                                 <label style="font-size: 0.8rem; font-weight: 600; color: var(--secondary-color);">Name</label>
-                                <input type="text" placeholder="John Doe" style="padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: var(--text-color);">
+                                <input type="text" name="name" required placeholder="John Doe" style="padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: var(--text-color);">
                             </div>
                             <div style="display: flex; flex-direction: column; gap: 0.5rem;">
                                 <label style="font-size: 0.8rem; font-weight: 600; color: var(--secondary-color);">Email</label>
-                                <input type="email" placeholder="john@example.com" style="padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: var(--text-color);">
+                                <input type="email" name="email" required placeholder="john@example.com" style="padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: var(--text-color);">
                             </div>
                         </div>
                         <div style="display: flex; flex-direction: column; gap: 0.5rem;">
                             <label style="font-size: 0.8rem; font-weight: 600; color: var(--secondary-color);">Subject</label>
-                            <input type="text" placeholder="Project Inquiry" style="padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: var(--text-color);">
+                            <input type="text" name="subject" placeholder="Project Inquiry" style="padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: var(--text-color);">
                         </div>
                         <div style="display: flex; flex-direction: column; gap: 0.5rem;">
                             <label style="font-size: 0.8rem; font-weight: 600; color: var(--secondary-color);">Message</label>
-                            <textarea rows="5" placeholder="How can I help you?" style="padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: var(--text-color); resize: none;"></textarea>
+                            <textarea name="message" rows="5" required placeholder="How can I help you?" style="padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: var(--text-color); resize: none;"></textarea>
                         </div>
                         <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+                        <div id="form-status"></div>
                     </form>
                 </div>
             </div>
@@ -78,5 +79,58 @@
         <p>&copy; 2026 Personal Portfolio. All rights reserved.</p>
     </footer>
 
+    <script>
+        const form = document.getElementById('contact-form');
+        const status = document.getElementById('form-status');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const data = new FormData(form);
+            
+            // Show loading state
+            const btn = form.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i> Sending...';
+            btn.disabled = true;
+
+            try {
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: data,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    status.innerHTML = "Success! Your message has been sent.";
+                    status.className = "success";
+                    form.reset();
+                } else {
+                    const result = await response.json();
+                    if (result.errors) {
+                        status.innerHTML = result.errors.map(error => error.message).join(", ");
+                    } else {
+                        status.innerHTML = "Oops! There was a problem submitting your form.";
+                    }
+                    status.className = "error";
+                }
+            } catch (error) {
+                status.innerHTML = "Oops! There was a problem connecting to the server.";
+                status.className = "error";
+            } finally {
+                btn.innerText = originalText;
+                btn.disabled = false;
+                // Auto-hide status after 5 seconds
+                setTimeout(() => { 
+                    status.style.opacity = '0';
+                    setTimeout(() => {
+                        status.className = "";
+                        status.style.opacity = '1';
+                    }, 300);
+                }, 5000);
+            }
+        });
+    </script>
 </body>
 </html>
